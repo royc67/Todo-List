@@ -49,16 +49,17 @@ function createContainer(todoText,prior, time){
     let newContainer = document.createElement('div')
     newContainer.className = "todoContainer";
     let priorDiv = document.createElement('div')
-    priorDiv.className = "todoPriority";
+    priorDiv.className = "todoPriority padder";
     priorDiv.innerHTML = prior;
     let timeDiv = document.createElement('div')
-    timeDiv.className = "todoCreatedAt";
+    timeDiv.className = "todoCreatedAt padder";
     timeDiv.innerHTML = time;
     let todoDiv = document.createElement('div')
-    todoDiv.className = "todoText";
+    todoDiv.className = "todoText padder";
     todoDiv.innerHTML = todoText;
     let removeButton = document.createElement('button')
     removeButton.innerHTML = 'X';
+    removeButton.className = 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'
     removeButton.onclick = function() {
         newContainer.remove();
         let counter = document.getElementById("counter");

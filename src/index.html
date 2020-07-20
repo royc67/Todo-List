@@ -1,33 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </head>
+
 <body>
     <!--Requirement 1 - The web app should have a heading-->
-    <h1>Todo List</h1>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Todo List</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <!--  Counter -->
+            <p>Tasks Left:</p>
+            <div id="counter">0</div>
+            <!--Sort Button-->
+            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortTasks()">Sort</button>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <!--Requirement 2 - The web app should have two sections: Control section and View section-->
+            <section id="controllSection">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input type="text" id="textInput" class="mdl-textfield__input">
+                    <label class="mdl-textfield__label" for="sample3">Enter Task</label>
+                </div>
+                <span class="custom-dropdown">
+                    <select id="prioritySelector" class="custom-select" style="width:200px;">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </span>
+                <button id="addButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    onclick="addItem()">Add</button>
 
-    <!--  Counter -->
-    <p>Tasks Left:</p><div id="counter" alt="Number Of tasks">0</div>
-    <!--Sort Button-->
-    <button id="sortButton" onclick="sortTasks()" alt="Sort Task List">Sort</button>
-    <!--Requirement 2 - The web app should have two sections: Control section and View section-->
-    <section id="controllSection">
-        <input  type="text" id="textInput" alt="Write Your Task">
-        <select id="prioritySelector" alt="Task Priority Selector">
-            <option value="1">1 - Not Important</option>
-            <option value="2">2 - Next week</option>
-            <option value="3">3 - Can do tomorrow</option>
-            <option value="4">4 - Important</option>
-            <option value="5">5 - Super  Imortant</option>
-        </select>
-        <button id="addButton" onclick="addItem()" alt="Add task">Add</button>
+            </section>
+            <div class="flex-container" >
+            <section id="viewSection"></section>
+            </div>
 
-    </section>
-    <section id="viewSection" alt="Task List Section"></section>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
+
 </html>
