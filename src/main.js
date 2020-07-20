@@ -8,11 +8,12 @@ function addItem(){
         input.focus();
         return;
     }
+    let time = new Date().toISOString().slice(0, 20).replace('T', ' ');
     let counter = document.getElementById("counter");
     counter.innerHTML = parseInt(counter.innerHTML) +1;
     let prior = document.getElementById('prioritySelector');
     let viewSec = document.getElementById('viewSection');
-    let newContainer = createContainer(input.value, prior.value);
+    let newContainer = createContainer(input.value, prior.value, time);
     viewSec.appendChild(newContainer);
     input.focus(); input.value = ''; 
 }
@@ -33,7 +34,7 @@ function addItem(){
 } */
 
 //Container Creation:
-function createContainer(todoText,prior){
+function createContainer(todoText,prior, time){
     let newContainer = document.createElement('div')
     newContainer.className = "todoContainer";
     let priorDiv = document.createElement('div')
@@ -41,7 +42,7 @@ function createContainer(todoText,prior){
     priorDiv.innerHTML = prior;
     let timeDiv = document.createElement('div')
     timeDiv.className = "todoCreatedAt";
-    timeDiv.innerHTML = new Date().toISOString().slice(0, 20).replace('T', ' ');
+    timeDiv.innerHTML = time;
     let todoDiv = document.createElement('div')
     todoDiv.className = "todoText";
     todoDiv.innerHTML = todoText;
