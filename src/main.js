@@ -2,6 +2,11 @@
 
 function addItem(){
     let input = document.getElementById('textInput');
+    if (input.value == ''){
+        alert("Please insert value!")
+        input.focus();
+        return;
+    }
     let prior = document.getElementById('prioritySelector');
     let viewSec = document.getElementById('viewSection');
     let newContainer = createContainer(input.value, prior.value);
