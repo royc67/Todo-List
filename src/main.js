@@ -2,6 +2,7 @@
 
 function addItem(){
     let input = document.getElementById('textInput');
+    //break if text is empty:
     if (input.value == ''){
         alert("Please insert value!")
         input.focus();
