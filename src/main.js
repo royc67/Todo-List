@@ -1,4 +1,9 @@
 
+let data = localStorage.data ? JSON.parse(localStorage.data) : []
+console.log(data)
+data.map((elememt) => createContainer(elememt.input, elememt.prior, elememt.time)).forEach(e => document.getElementById('viewSection').appendChild(e))
+let counter = document.getElementById("counter");
+counter.innerHTML = data.length;
 
 function addItem(){
     let input = document.getElementById('textInput');
@@ -14,6 +19,12 @@ function addItem(){
     let prior = document.getElementById('prioritySelector');
     let viewSec = document.getElementById('viewSection');
     let newContainer = createContainer(input.value, prior.value, time);
+    data.push({
+        input: input.value,
+        prior:prior.value,
+        time: time
+    })
+    window.localStorage.setItem('data', JSON.stringify(data))
     viewSec.appendChild(newContainer);
     input.focus(); input.value = ''; 
 }
@@ -52,6 +63,8 @@ function createContainer(todoText,prior, time){
         newContainer.remove();
         let counter = document.getElementById("counter");
         counter.innerHTML = parseInt(counter.innerHTML) -1;
+        data = data.filter(e => e.time !== time)
+        window.localStorage.setItem('data', JSON.stringify(data))
     }
 
     newContainer.appendChild(priorDiv);
