@@ -8,6 +8,8 @@ function addItem(){
         input.focus();
         return;
     }
+    let counter = document.getElementById("counter");
+    counter.innerHTML = parseInt(counter.innerHTML) +1;
     let prior = document.getElementById('prioritySelector');
     let viewSec = document.getElementById('viewSection');
     let newContainer = createContainer(input.value, prior.value);
@@ -43,9 +45,18 @@ function createContainer(todoText,prior){
     let todoDiv = document.createElement('div')
     todoDiv.className = "todoText";
     todoDiv.innerHTML = todoText;
-    
+    let removeButton = document.createElement('button')
+    removeButton.innerHTML = 'X';
+    removeButton.onclick = function() {
+        newContainer.remove();
+        let counter = document.getElementById("counter");
+        counter.innerHTML = parseInt(counter.innerHTML) -1;
+    }
+
     newContainer.appendChild(priorDiv);
     newContainer.appendChild(timeDiv);
     newContainer.appendChild(todoDiv);
+    newContainer.appendChild(removeButton);
+
     return newContainer;
 }
