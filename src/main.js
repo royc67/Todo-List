@@ -57,6 +57,11 @@ function createContainer(todoText,prior){
     newContainer.appendChild(timeDiv);
     newContainer.appendChild(todoDiv);
     newContainer.appendChild(removeButton);
+    newContainer.className = "todoContainer"
 
     return newContainer;
+}
+
+function sortTasks(){
+    
 }
