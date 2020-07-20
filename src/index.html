@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royc's TODO list</title>
-    <script src="main.js"></script>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
 <body>
-    
+    <!--Requirement 1 - The web app should have a heading-->
+    <h1>Todo List</h1>
+    <!--Requirement 2 - The web app should have two sections: Control section and View section-->
+    <section id="controllSection">
+        <input  type="text" id="textInput">
+        <select id="prioritySelector">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button id="addButton" onclick="addItem()">Add</button>
+
+    </section>
+    <section id="viewSection"></section>
 </body>
 </html>
