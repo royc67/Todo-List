@@ -1,0 +1,18 @@
+.todoContainer {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.priority {
+  padding-right: 30px;
+  padding-left: 5px;
+}
+
+.todoCreatedAt{
+    padding-left: 20px;
+}
+
+.todoText {
+    padding-left: 5px;
+}
