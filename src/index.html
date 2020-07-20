@@ -11,23 +11,23 @@
     <h1>Todo List</h1>
 
     <!--  Counter -->
-    <p>Tasks Left:</p><div id="counter">0</div>
+    <p>Tasks Left:</p><div id="counter" alt="Number Of tasks">0</div>
     <!--Sort Button-->
-    <button id="sortButton" onclick="sortTasks()">Sort</button>
+    <button id="sortButton" onclick="sortTasks()" alt="Sort Task List">Sort</button>
     <!--Requirement 2 - The web app should have two sections: Control section and View section-->
     <section id="controllSection">
-        <input  type="text" id="textInput">
-        <select id="prioritySelector">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+        <input  type="text" id="textInput" alt="Write Your Task">
+        <select id="prioritySelector" alt="Task Priority Selector">
+            <option value="1">1 - Not Important</option>
+            <option value="2">2 - Next week</option>
+            <option value="3">3 - Can do tomorrow</option>
+            <option value="4">4 - Important</option>
+            <option value="5">5 - Super  Imortant</option>
         </select>
-        <button id="addButton" onclick="addItem()">Add</button>
+        <button id="addButton" onclick="addItem()" alt="Add task">Add</button>
 
     </section>
-    <section id="viewSection"></section>
+    <section id="viewSection" alt="Task List Section"></section>
     <script src="main.js"></script>
 </body>
 </html>
