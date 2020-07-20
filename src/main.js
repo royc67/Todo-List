@@ -37,7 +37,7 @@ function createContainer(todoText,prior){
     let newContainer = document.createElement('div')
     newContainer.className = "todoContainer";
     let priorDiv = document.createElement('div')
-    priorDiv.className = "priority";
+    priorDiv.className = "todoPriority";
     priorDiv.innerHTML = prior;
     let timeDiv = document.createElement('div')
     timeDiv.className = "todoCreatedAt";
