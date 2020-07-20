@@ -62,6 +62,24 @@ function createContainer(todoText,prior){
     return newContainer;
 }
 
+// Sorting the list!!!
 function sortTasks(){
-    
+    let list, i, switching, b, shouldSwitch;
+    list = document.getElementById("viewSection");
+    switching = true;
+    while (switching) {
+        switching = false;
+        b = list.getElementsByClassName("todoContainer"); 
+        for (i = 0; i < (b.length - 1); i++) {
+            shouldSwitch = false;
+            if (b[i].innerHTML < b[i + 1].innerHTML){
+                shouldSwitch = true;
+                break;
+            }
+        }
+        if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switching = true;
+        }
+    }
 }
