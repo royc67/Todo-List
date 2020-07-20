@@ -18,7 +18,7 @@ function addItem(){
 }
 
 // creating timestamp for task:
-function getTime() {
+/* function getTime() {
     let today = new Date();
     let dd = today.getDate();
     let mm = today.getMonth()+1; 
@@ -30,7 +30,7 @@ function getTime() {
     if(mm<10) mm='0'+mm;
     today = dd+'/'+mm+'/'+yyyy+" "+hh+":"+min+":"+ss;
     return today; 
-}
+} */
 
 //Container Creation:
 function createContainer(todoText,prior){
@@ -41,7 +41,7 @@ function createContainer(todoText,prior){
     priorDiv.innerHTML = prior;
     let timeDiv = document.createElement('div')
     timeDiv.className = "todoCreatedAt";
-    timeDiv.innerHTML = getTime();
+    timeDiv.innerHTML = new Date().toISOString().slice(0, 20).replace('T', ' ');
     let todoDiv = document.createElement('div')
     todoDiv.className = "todoText";
     todoDiv.innerHTML = todoText;
