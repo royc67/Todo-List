@@ -78,16 +78,18 @@ function createContainer(todoText,prior, time){
 }
 
 // Sorting the list By priority:
-function sortByPriority(){
-    let list, i, switching, b, shouldSwitch;
+function sortBy(){
+    let list, i, switching, b, shouldSwitch, sortBySelector;
+    sortBySelector = document.getElementById("sortBySelector").value;
     list = document.getElementById("viewSection");
     switching = true;
     while (switching) {
         switching = false;
+        prior = list.getElementsByClassName(sortBySelector); 
         b = list.getElementsByClassName("todoContainer"); 
         for (i = 0; i < (b.length - 1); i++) {
             shouldSwitch = false;
-            if (b[i].innerHTML < b[i + 1].innerHTML){
+            if (prior[i].innerHTML < prior[i + 1].innerHTML){
                 shouldSwitch = true;
                 break;
             }

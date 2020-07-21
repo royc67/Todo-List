@@ -23,7 +23,12 @@
             <p>Tasks Left:</p>
             <div id="counter" alt="Number of tasks left">0</div>
             <!--Sort Button-->
-            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortByPriority()" alt="Sort Tasks by Priority">Sort By Priority</button>
+            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortBy()" alt="Sort Tasks by:">Sort By:</button>
+            <select id="sortBySelector" class="custom-select" style="width:90px;" alt="Sort By:">
+                <option value="todoPriority">Priority</option>
+                <option value="todoCreatedAt">Time</option>
+                <option value="todoText">Task Name</option>
+            </select>
         </div>
         <div class="mdl-card__actions mdl-card--border">
             <!--Requirement 2 - The web app should have two sections: Control section and View section-->
