@@ -13,7 +13,7 @@ function addItem(){
         input.focus();
         return;
     }
-    let time = new Date().toISOString().slice(0, 20).replace('T', ' ');
+    let time = new Date().toISOString().slice(0, 19).replace('T', ' ');
     let counter = document.getElementById("counter");
     counter.innerHTML = parseInt(counter.innerHTML) +1;
     let prior = document.getElementById('prioritySelector');
