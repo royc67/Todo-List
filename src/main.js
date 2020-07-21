@@ -78,7 +78,7 @@ function createContainer(todoText,prior, time){
 }
 
 // Sorting the list By priority:
-function sortTasks(){
+function sortByPriority(){
     let list, i, switching, b, shouldSwitch;
     list = document.getElementById("viewSection");
     switching = true;
