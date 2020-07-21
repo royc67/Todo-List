@@ -29,7 +29,7 @@
             <!--Requirement 2 - The web app should have two sections: Control section and View section-->
             <section id="controllSection">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input type="text" id="textInput" class="mdl-textfield__input" alt="Write A Task">
+                    <input type="text" id="textInput" class="mdl-textfield__input" alt="Write A Task" onkeyup="isEnter(event)">
                     <label class="mdl-textfield__label" for="sample3">Enter Task</label>
                 </div>
                 <span class="custom-dropdown">
@@ -38,7 +38,7 @@
                         <option value="2">2 - Wait For Tomorrow</option>
                         <option value="3">3 - Normal</option>
                         <option value="4">4 - Importat</option>
-                        <option value="5">5 - Super Important</option>
+                        <option value="5">5 - Very Important</option>
                     </select>
                 </span>
                 <button id="addButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"

@@ -116,3 +116,7 @@ function runSearch() {
         }
     }
 }
+
+function isEnter(event){
+    if (event.keyCode == 13) addItem();
+}
