@@ -13,7 +13,7 @@ function addItem(){
         input.focus();
         return;
     }
-    let time = new Date().toISOString().slice(0, 19).replace('T', ' ');
+    let time = new Date().toISOString()
     let counter = document.getElementById("counter");
     counter.innerHTML = parseInt(counter.innerHTML) +1;
     let prior = document.getElementById('prioritySelector');
@@ -53,7 +53,7 @@ function createContainer(todoText,prior, time){
     priorDiv.innerHTML = prior;
     let timeDiv = document.createElement('div')
     timeDiv.className = "todoCreatedAt padder";
-    timeDiv.innerHTML = time;
+    timeDiv.innerHTML = time.slice(0, 19).replace('T', ' ');
     let todoDiv = document.createElement('div')
     todoDiv.className = "todoText padder";
     todoDiv.innerHTML = todoText;
