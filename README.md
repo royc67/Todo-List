@@ -116,4 +116,6 @@ $ npm run test
 
  GOOD LUCK!
  
+Link to Vercel: https://vercel.com/royc67
+
  ![alt text](./readme-files/testing-recording.gif)
