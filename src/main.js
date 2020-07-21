@@ -98,3 +98,21 @@ function sortTasks(){
         }
     }
 }
+
+//Search Feature:
+function runSearch() {
+    var input, filter, viewSection, todoContainer, todoText, i, txtValue;
+    input = document.getElementById("searchInput");
+    filter = input.value.toUpperCase();
+    viewSection = document.getElementById("viewSection");
+    todoContainer = viewSection.getElementsByClassName("todoContainer");
+    for (i = 0; i < todoContainer.length; i++) {
+        todoText = todoContainer[i].getElementsByClassName("todoText")[0];
+        txtValue = todoText.textContent || todoText.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            todoContainer[i].style.display = "";
+        } else {
+            todoContainer[i].style.display = "none";
+        }
+    }
+}
