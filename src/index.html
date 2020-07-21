@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body>
+    <!--Requirement 1 - The web app should have a heading-->
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h1 class="mdl-card__title-text">Todo List</h1>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <!--  Counter -->
+            <p>Tasks Left:</p>
+            <div id="counter" alt="Number of tasks left">0</div>
+            <!--Sort Button-->
+            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortBy()" alt="Sort Tasks by:">Sort By:</button>
+            <select id="sortBySelector" class="custom-select" style="width:90px;" alt="Sort By:">
+                <option value="todoPriority">Priority</option>
+                <option value="todoCreatedAt">Time</option>
+                <option value="todoText">Task Name</option>
+            </select>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <!--Requirement 2 - The web app should have two sections: Control section and View section-->
+            <section id="controllSection">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input type="text" id="textInput" class="mdl-textfield__input" alt="Write A Task" onkeyup="isEnter(event)">
+                    <label class="mdl-textfield__label" for="sample3">Enter Task</label>
+                </div>
+                <span class="custom-dropdown">
+                    <select id="prioritySelector" class="custom-select" style="width:200px;" alt="Select Priority">
+                        <option value="1">1 - Not Important</option>
+                        <option value="2">2 - Wait For Tomorrow</option>
+                        <option value="3">3 - Normal</option>
+                        <option value="4">4 - Importat</option>
+                        <option value="5">5 - Very Important</option>
+                    </select>
+                </span>
+                <button id="addButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                    onclick="addItem()" alt="Add Button">Add</button>
+
+            </section>
+            <!-- Serch tasks:-->
+            <label for="searchInput">Search Tasks:</label>
+            <input type="text" id="searchInput" onkeyup="runSearch()" alt="Search Tasks"/>
+
+            <!--view Section-->
+            <div class="flex-container" >
+            <section id="viewSection" alt="Task List:"></section>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
