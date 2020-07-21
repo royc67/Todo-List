@@ -21,32 +21,32 @@
         <div class="mdl-card__supporting-text">
             <!--  Counter -->
             <p>Tasks Left:</p>
-            <div id="counter">0</div>
+            <div id="counter" alt="Number of tasks left">0</div>
             <!--Sort Button-->
-            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortTasks()">Sort</button>
+            <button id="sortButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" onclick="sortTasks()" alt="Sort Tasks by Priority">Sort</button>
         </div>
         <div class="mdl-card__actions mdl-card--border">
             <!--Requirement 2 - The web app should have two sections: Control section and View section-->
             <section id="controllSection">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                    <input type="text" id="textInput" class="mdl-textfield__input">
+                    <input type="text" id="textInput" class="mdl-textfield__input" alt="Write A Task">
                     <label class="mdl-textfield__label" for="sample3">Enter Task</label>
                 </div>
                 <span class="custom-dropdown">
-                    <select id="prioritySelector" class="custom-select" style="width:200px;">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                    <select id="prioritySelector" class="custom-select" style="width:200px;" alt="Select Priority">
+                        <option value="1">1 - Not Important</option>
+                        <option value="2">2 - Wait For Tomorrow</option>
+                        <option value="3">3 - Normal</option>
+                        <option value="4">4 - Importat</option>
+                        <option value="5">5 - Super Important</option>
                     </select>
                 </span>
                 <button id="addButton" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
-                    onclick="addItem()">Add</button>
+                    onclick="addItem()" alt="Add Button">Add</button>
 
             </section>
             <div class="flex-container" >
-            <section id="viewSection"></section>
+            <section id="viewSection" alt="Task List:"></section>
             </div>
 
         </div>
