@@ -118,4 +118,4 @@ $ npm run test
  
 Link to Vercel: https://vercel.com/royc67
 
- ![alt text](./readme-files/testing-recording.gif)
+ ![alt text](./readme-files/project.gif)
