@@ -116,4 +116,4 @@ $ npm run test
 
  GOOD LUCK!
  
- ![alt text](testing-recording.gif)
+ ![alt text](./readme-files/testing-recording.gif)
