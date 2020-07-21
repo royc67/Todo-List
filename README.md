@@ -116,6 +116,6 @@ $ npm run test
 
  GOOD LUCK!
  
-Link to Vercel: https://vercel.com/royc67
+Link to Vercel: https://royc-todo-list.vercel.app/
 
  ![alt text](./readme-files/project.gif)
