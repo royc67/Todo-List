@@ -116,6 +116,27 @@ $ npm run test
 
  GOOD LUCK!
  
-Link to Vercel: https://vercel.com/royc67
+Link to Vercel: https://royc-todo-list.vercel.app/
 
  ![alt text](./readme-files/project.gif)
+
+ Link to Personal Interview: https://github.com/royc67/Roy_TodoList/blob/RoyBranch/Personal%20Interview.mp4
+
+ Bonus Features:
+- Local Storage:
+	When a task is created/removed, The change is also made on the local storage.
+	Local storage is loaded on startup.
+
+- Sort By feature Upgraded:
+	Add an option to sort tasks by Time, Task Name and priority.
+	
+- Accessibility:
+	Added alternatives to all elements - for clients with screen readers.
+	
+- Add task on Enter:
+	can also add task on enter, No need to press the add button.
+	
+- Search Bar:
+	When typing the search bar - a function that filters the tasks with the text search applied.
+	All tasks without the text are temporarily hidden (display:none)
+	when the search bar is empty - list is back to its default view.
